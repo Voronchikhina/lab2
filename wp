@@ -1,0 +1,165 @@
+// Лаба2.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+//
+
+
+#include "iostream"
+#include "utility"
+#include "iso646.h"
+using namespace std;
+int main()
+{
+    int X, Y, Z, a, b, c, d, N, i, proiz, a1, b1;
+    double proiz1, proiz2, proiz3;
+    proiz = 1;
+    proiz1 = 1;
+    proiz2 = 1;
+    proiz3 = 1;
+    cout << "1 Zadan" << endl;
+    cout << "X="; cin >> X;
+    cout << "Y="; cin >> Y;
+    cout << "Z="; cin >> Z;
+    //1.1//
+    cout << "1 punkt" << endl;
+    if (((abs(X) % 2) == 1) && ((abs(Y) % 2) == 1)) {
+        cout << "Condition is true" << endl;
+    }
+    else { cout << "Condition is false" << endl; }
+    //1.2//
+    cout << "2 punkt" << endl;
+    if (((X < 20) && (Y >= 20)) || ((X >= 20) && (Y < 20))) {
+        cout << "Condition is true" << endl;
+    }
+    else { cout << "Condition is false" << endl; }
+    //1.3//
+    cout << "3 punkt" << endl;
+    if (((X == 0) || (Y == 0))) {
+        cout << "Condition is true" << endl;
+    }
+    else { cout << "Condition is false" << endl; }
+    //1.4//
+    cout << "4 punkt" << endl;
+    if ((X < 0) && (Y < 0) && (Z << 0)) {
+        cout << "Condition is true" << endl;
+    }
+    else { cout << "Condition is false" << endl; }
+    //1.5//
+    cout << "5 punkt" << endl;
+    if ((((abs(X) % 5) == 0) && !((abs(Y) % 5) == 0) && !((abs(Z) % 5) == 0)) || (!((abs(X) % 5) == 0) && ((abs(Y) % 5) == 0) && !((abs(Z) % 5) == 0)) || (!((abs(X) % 5) == 0) && !((abs(Y) % 5) == 0) && ((abs(Z) % 5) == 0))) {
+        cout << "Condition is true" << endl;
+    }
+    else { cout << "Condition is false" << endl; }
+    //1.6//
+    cout << "6 punkt" << endl;
+    if ((X > 100) || (Y > 100) || (Z > 100)) {
+        cout << "Condition is true" << endl;
+    }
+    else { cout << "Condition is false" << endl; }
+    //2//
+    cout << "2 zadan" << endl;
+    cout << "a="; cin >> a; cout << "b="; cin >> b;
+    cout << "c="; cin >> c; cout << "d="; cin >> d;
+    std::pair <int, int> p1;
+    p1.first = a;
+    p1.second = b;
+    std::cout << p1.first << " " << p1.second << std::endl;
+    std::pair <int, int> p2;
+    p2.first = c;
+    p2.second = d;
+    std::cout << p2.first << " " << p2.second << std::endl;
+    //2.1//
+    cout << "1 punkt" << endl;
+    if ((a <= 8) && (b <= 8) && (c <= 8) && (d <= 8)) {
+        if ((a == c) ^ (b == d)) {
+            cout << "Opasno";
+        }
+        else { cout << "Bezopasno" << endl; }
+    }
+    //2.2//
+    cout << "2 punkt" << endl;
+    if ((a <= 8) && (b <= 8) && (c <= 8) && (d <= 8)) {
+        if ((abs(c - a)) == (abs(d - b))) {
+            cout << "Opasno";
+        }
+        else { cout << "Bezopasno" << endl; }
+    }
+    //2.3//
+    cout << "3 punkt" << endl;
+    if ((a <= 8) && (b <= 8) && (c <= 8) && (d <= 8)) {
+        if (((abs(c - a)) <= 1) || ((abs(d - b)) <= 1)) {
+            cout << "Opasno";
+        }
+        else { cout << "Bezopasno" << endl; }
+    }
+    //2.4//
+    cout << "4 punkt" << endl;
+    if ((a <= 8) && (b <= 8) && (c <= 8) && (d <= 8)) {
+        if (((abs(c - a)) == (abs(d - b))) ^ ((a == c) ^ (b == d))) {
+            cout << "Opasno";
+        }
+        else { cout << "Bezopasno" << endl; }
+    }
+    //2.5a//
+    cout << "5a punkt" << endl;
+    if ((a <= 8) && (b <= 8) && (c <= 8) && (d <= 8)) {
+        if (((a == c) && ((b + 1) == d))) {
+            cout << "Opasno";
+        }
+        else { cout << "Bezopasno" << endl; }
+    }
+    //2.5b//
+    cout << "5b punkt" << endl;
+    if ((a <= 8) && (b <= 8) && (c <= 8) && (d <= 8)) {
+        if (((a == c) && ((b + 2) == d))) {
+            cout << "Opasno";
+        }
+        else { cout << "Bezopasno" << endl; }
+    }
+    //3//
+    cout << "3 zadan" << endl;
+    cout << "N="; cin >> N;
+    for (i = 1; i <= 9; i++) {
+        cout << i << " " << "*" << " " << 7 << " " << "=" << " " << i * 7 << endl;
+    }
+    for (i = 1; i <= 9; i++) {
+        cout << i << " " << "*" << " " << N << " " << "=" << " " << i * N << endl;
+    }
+
+    //4//
+    cout << "4 zadan" << endl;
+    proiz = 1;
+    cout << "4.1" << endl;
+    for (i = 8; i <= 15; i++) {
+        proiz = proiz * i;
+    }
+    cout << proiz << endl;
+
+    //4.2//
+    cout << "a1="; cin >> a1;
+    proiz1 = 1;
+    cout << "4.2" << endl;
+    if (a1 < 20) {
+        for (i = a1; i <= 20; i++) {
+            proiz1 = proiz1* i;
+        }
+        cout << proiz1 << endl;
+    }
+    //4.3//
+    cout << "b1="; cin >> b1;
+    cout << "4.3" << endl;
+    if (b1 < 20) {
+        for (i = b1; i <= 20; i++) {
+            proiz2 = proiz2 * i;
+        }
+        cout << proiz2 << endl;
+    }
+    //4.4//
+    cout << "4.4" << endl;
+    if (a1 <= b1) {
+        for (i = a1; i <= b1; i++) {
+            proiz3 = proiz3 * i;
+        }
+        cout << proiz3 << endl;
+    }
+    system("pause");
+    return 0;
+    }
